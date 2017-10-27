@@ -25,7 +25,7 @@ export class AppContainer extends Component {
       <div className={styles.container}>
         <span>This is a test</span>
         <br/>
-        <b>So there</b>
+        <b>So there ?</b>
         <Hello name="Barry"/>
       </div>
     );
