@@ -1,5 +1,6 @@
 .container {
   /*App container styles belongs here*/
   font-size:1.2em;
-  background-color:lightgrey;
+  background-color:rgb(64, 62, 77);
+  color:white;
 }
