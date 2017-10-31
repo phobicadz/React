@@ -27,9 +27,9 @@ export class AppContainer extends Component {
     fetch(`https://randomuser.me/api/?results=${value}`)
       .then(results => results.json()).then(data => {
         const pictures = data.results.map((pic, index) => (
-          <div key={index}>
+          <div key={pic.login.salt}>
             <img src={pic.picture.medium} alt="" />
-            <span>{pic.name.first}&nbsp;{pic.name.last}</span>
+            <span>{pic.name.title}&nbsp;{pic.name.first}&nbsp;{pic.name.last}</span>
           </div>
         ));
         this.setState({ pictures, peopleToDisplay: value });
@@ -54,6 +54,7 @@ export class AppContainer extends Component {
         <b>So there</b>
         <Hello name="Barry" />
         <NameForm onNumberChange={this.handleNumberChange} value={this.state.peopleToDisplay} />
+        <br />
         <ShowUsers value={this.state.pictures} />
       </div>
     );
