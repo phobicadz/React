@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadApp } from 'actions/app';
 import styles from './app.css';
-import Hello, { ShowUsers, NameForm, ShowSenders } from './hello';
+import Hello, { ShowUsers, NameForm, ShowSenders, Clock } from './hello';
 
 type Props = {
   dispatch: () => void,
@@ -67,6 +67,7 @@ export class AppContainer extends Component {
         <NameForm onNumberChange={this.handleNumberChange} value={this.state.peopleToDisplay} />
         <br />
         <ShowUsers value={this.state.pictures} />
+        <Clock />
       </div>
     );
   }
