@@ -1,5 +1,9 @@
 import React from 'react';
 
+type Props = {
+  name: string
+}
+
 export default class Hello extends React.PureComponent {
   render() {
     return (
@@ -18,6 +22,21 @@ export class ShowUsers extends React.Component {
     return (
       <div>
         {this.props.value}
+      </div>
+    );
+  }
+}
+
+export class ShowSenders extends React.Component {
+  componentDidMount() {
+  }
+
+  render() {
+    return (
+      <div>
+        <select>
+          {this.props.senders}
+        </select>
       </div>
     );
   }
