@@ -4,6 +4,7 @@ type Props = {
   name: string
 }
 
+// react actually prefers one file per component
 export class HelloWorld extends React.PureComponent {
   render() {
     return (
